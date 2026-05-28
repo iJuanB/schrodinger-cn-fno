@@ -1,4 +1,4 @@
-# Solving the Schrödinger Equation: Crank-Nicolson vs Fourier Neural Operators
+# schrodinger-cn-fno
 
 Numerical solution of the time-dependent Schrödinger equation comparing two paradigms: the classical **Crank-Nicolson** finite difference method and **Fourier Neural Operators (FNO)**, a neural architecture that learns the solution operator directly in Fourier space.
 
@@ -51,17 +51,17 @@ The FNO was trained on **Google Colaboratory** with GPU backend (Python 3, Googl
 
 ## Usage
 
-Open `notebook.ipynb` directly in Google Colab:
+Open `schrodinger_cn_fno.ipynb` directly in Google Colab:
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/iJuanB/schrodinger-cn-fno/blob/main/schrodinger_cn_fno.ipynb)
 
 Or clone and run locally:
 
 ```bash
-git clone https://github.com/<your-username>/schrodinger-cn-fno.git
+git clone https://github.com/iJuanB/schrodinger-cn-fno.git
 cd schrodinger-cn-fno
 pip install numpy scipy jax flax optax einops pandas matplotlib
-jupyter notebook notebook.ipynb
+jupyter notebook schrodinger_cn_fno.ipynb
 ```
 
 **Main dependencies:** `numpy`, `scipy`, `jax`, `flax`, `optax`, `einops`, `pandas`
