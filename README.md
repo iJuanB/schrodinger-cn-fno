@@ -27,29 +27,15 @@ This project implements both approaches for 1D quantum systems with Gaussian wav
 
 | $N$ | CN total (s) | FNO total (s) | Speedup |
 |----:|-------------:|--------------:|--------:|
-| 1 | 0.015 | 0.129 | 0.1× |
-| 10 | 0.172 | 0.133 | 1.3× |
-| 50 | 0.736 | 0.138 | 5.3× |
-| 100 | 1.603 | 0.172 | 9.3× |
-| 500 | 7.699 | 0.656 | 11.7× |
-| 1000 | 15.206 | 1.662 | 9.1× |
-| 3000 | 46.298 | 4.538 | 10.2× |
+| 1 | 0.018 | 0.132 | 0.1× |
+| 10 | 0.141 | 2.974 | 0.0× |
+| 50 | 1.154 | 2.739 | 0.4× |
+| 100 | 1.552 | 3.016 | 0.5× |
+| 500 | 10.280 | 0.720 | 14.3× |
+| 1000 | 15.991 | 1.802 | 8.9× |
+| 3000 | 48.805 | 5.618 | 8.7× |
 
-FNO achieves up to **11.7× speedup** over Crank-Nicolson for large batches of initial conditions, at the cost of ~8.9% relative L2 error and a norm deviation of order $10^{-2}$.
-
----
-
-## Repository Structure
-
-```
-schrodinger-cn-fno/
-│
-├── notebook.ipynb          # Main notebook (CN + FNO + comparison)
-├── paper/
-│   ├── main.tex            # LaTeX source
-│   └── referencias.bib     # BibTeX references
-└── README.md
-```
+FNO achieves up to **14.3× speedup** over Crank-Nicolson for large batches of initial conditions, at the cost of ~8.9% relative L2 error and a norm deviation of order $10^{-2}$.
 
 ---
 
@@ -74,9 +60,11 @@ Or clone and run locally:
 ```bash
 git clone https://github.com/<your-username>/schrodinger-cn-fno.git
 cd schrodinger-cn-fno
-pip install numpy scipy matplotlib torch
+pip install numpy scipy jax flax optax einops pandas matplotlib
 jupyter notebook notebook.ipynb
 ```
+
+**Main dependencies:** `numpy`, `scipy`, `jax`, `flax`, `optax`, `einops`, `pandas`
 
 ---
 
