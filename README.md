@@ -1,4 +1,4 @@
-# schrodinger-cn-fno
+# Solving the Schrödinger Equation: Crank-Nicolson vs Fourier Neural Operators
 
 Numerical solution of the time-dependent Schrödinger equation comparing two paradigms: the classical **Crank-Nicolson** finite difference method and **Fourier Neural Operators (FNO)**, a neural architecture that learns the solution operator directly in Fourier space.
 
